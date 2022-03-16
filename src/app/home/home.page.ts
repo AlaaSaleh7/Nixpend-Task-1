@@ -37,7 +37,6 @@ export class HomePage {
     const modal = await this.modalCtrl.create({
       component: ModalPage,
     });
-    console.log('wwwwwwwwwwwwww');
     await modal.present();
   }
 

@@ -32,26 +32,6 @@ export class DataService {
     return this.storage.get(TASK);
   }
 
-  postAllTasks() {
-    this.storage.set('tasks', [
-      {
-        title: 'Task One',
-        status: 'completed',
-        date: '14/5/2022',
-      },
-      {
-        title: 'Task Two',
-        status: 'canceled',
-        date: '14/6/2022',
-      },
-      {
-        title: 'Task Three',
-        status: 'in progress',
-        date: '14/9/2022',
-      },
-    ]);
-  }
-
   setParams(body) {
     this.navParams = body;
   }

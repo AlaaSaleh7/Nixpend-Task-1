@@ -5,4 +5,47 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content> </ion-content>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">The title of Task</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Enter the title"
+        outFocus
+        [(ngModel)]="newTitle"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">The Date of Task</ion-label>
+      <ion-input
+        type="text"
+        placeholder="Enter the date"
+        outFocus
+        [(ngModel)]="newDate"
+      ></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Choose Status</ion-label>
+      </ion-list-header>
+      <ion-radio-group [(ngModel)]="newStatus">
+        <ion-item lines="none">
+          <ion-label>Completed</ion-label>
+          <ion-radio value="completed" slot="start"></ion-radio>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>Canceled</ion-label>
+          <ion-radio value="canceled" slot="start"></ion-radio>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label>In Progress</ion-label>
+          <ion-radio value="in progress" slot="start"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-button class="ion-margin-top" slot="center" (click)="addNewTask()">
+      Add</ion-button
+    >
+  </ion-list>
+</ion-content>
